@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eec7cd73-615b-43b4-b261-7292c08db468" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DP_2023-1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch01/ch01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch02/ch02.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch03/ch03.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch04/ch04.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch05/ch05.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch06/ch06.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch07/ch07.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch08/ch08.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch09/ch09.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch10/ch10.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch11/ch11.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch12/ch12.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch13/ch13.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch14/ch14.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch15/ch15.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch16/ch16.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch17/ch17.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch18/ch18.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch19/ch19.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch20/ch20.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch21/ch21.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch22/ch22.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ch23/ch23.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch01/ch01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch02/ch02.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch03/ch03.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch04/ch04.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch05/ch05.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch06/ch06.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch07/ch07.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch08/ch08.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch09/ch09.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch10/ch10.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch11/ch11.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch12/ch12.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch13/ch13.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch14/ch14.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch15/ch15.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch16/ch16.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch17/ch17.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch18/ch18.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch19/ch19.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch20/ch20.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch21/ch21.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch22/ch22.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch23/ch23.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MiVmK7AYncABK6DucSw6k04mFm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="DP_2023-1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="DP_2023-1" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eec7cd73-615b-43b4-b261-7292c08db468" name="Changes" comment="" />
+      <created>1678250548995</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678250548995</updated>
+    </task>
+    <servers />
+  </component>
+</project>

@@ -1,0 +1,6 @@
+#written by FileProperties
+#Tue Mar 28 00:57:49 KST 2023
+depth=32
+height=512
+name=pyw
+width=1024

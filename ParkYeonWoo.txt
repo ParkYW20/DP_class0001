@@ -1,0 +1,10 @@
+#written by FileProperties
+#Tue Mar 28 13:24:37 KST 2023
+Location=Anyang-si
+Name=Park YeonWoo
+StudentID=20200207
+Year=2023
+bornYear=2002
+height=100
+name=pyw
+width=640
