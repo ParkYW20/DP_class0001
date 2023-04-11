@@ -1,8 +1,7 @@
 package ch05.A3b;
 
 public class Singleton {
-    private static Singleton singleton = null;
-
+    private static Singleton singleton = null;  
     private Singleton() {
         System.out.println("인스턴스를 생성했습니다.");
         slowdown();

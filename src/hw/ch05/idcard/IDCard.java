@@ -1,12 +1,12 @@
 package hw.ch05.idcard;
 
-import ch04.practice.framework.Product;
+import hw.ch05.framework.Product;
 
 public class IDCard extends Product {
     private String owner;
     private int serial;
 
-    // 패키지 visibility (같은 패키지에 속한 애들만 볼 수 있음)
+    // 패키지 visibility
     IDCard(String owner, int serial) {  
         System.out.println(owner + "의 카드를 만듭니다.");
         this.owner = owner;

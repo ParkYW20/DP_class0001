@@ -1,11 +1,26 @@
 package hw.ch05.idcard;
 
-import ch04.practice.framework.Factory;
-import ch04.practice.framework.Product;
+import hw.ch05.framework.Factory;
+import hw.ch05.framework.Product;
 
 public class IDCardFactoryYeonWooPark1 extends Factory {
 
+    // 속성
     private int serial = 100;
+    
+    // 3: Singleton 객체 미리 생성
+    private static IDCardFactoryYeonWooPark1 Singleton = new IDCardFactoryYeonWooPark1();   // static: 클래스 만들어질 때 같이 만들어지도록 함
+    
+    // 1: 생성자를 private으로 한다
+    private IDCardFactoryYeonWooPark1() {
+        System.out.println("인스턴스가 생성되었습니다.");
+    }
+    
+    // 2: 객체를 얻어가는 메소드를 구현
+    public static IDCardFactoryYeonWooPark1 getInstance() {
+        return Singleton;
+    }
+
 
     @Override
     protected Product createProduct(String owner) {
@@ -16,8 +31,4 @@ public class IDCardFactoryYeonWooPark1 extends Factory {
     protected void registerProduct(Product product) {
         System.out.println(product + "을 등록했습니다.");
     }
-
-    // 중요) 부모 클래스는 추상, 구체적인 메소드 내용은 자신이 구현
-    // 부모 클래스(Factory)에서는 구체적으로 어떤 제품을 생성하는지 알 수 없음
 }
-

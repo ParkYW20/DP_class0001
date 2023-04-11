@@ -15,9 +15,7 @@ public class Main {
         // 신분증을 공장을 통해 생성
         Factory f = new IDCardFactory();
         
-        Product id01 = f.create("csh");
         Product id02 = f.create("pyw");
-        id01.use(); 
         id02.use(); 
     }
 }

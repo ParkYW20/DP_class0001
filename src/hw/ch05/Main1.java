@@ -1,21 +1,24 @@
 package hw.ch05;
 
-import ch04.practice.framework.Factory;
-import ch04.practice.framework.Product;
-// import ch04.practice.idcard.IDCard;
-import ch04.practice.idcard.IDCardFactory;
+import hw.ch05.idcard.IDCardFactoryYeonWooPark1;
 
 public class Main1 {
+    // 
     public static void main(String[] args) {
-        // 신분증 직접 생성
-        // Product id01 = new IDCard("pyw");    // 패키지 비저블리티 -> 임시로 클래스에 public 붙여야 실행 가능
-        // id01.use();
+    
+        System.out.println("20200207 박연우");
 
+        // getInstace()를 두 번 호출, factory1과 factory2가 가리키도록 함
+        // Factory f = new IDCardFactoryYeonWooPark1();
+        IDCardFactoryYeonWooPark1 factory1 = IDCardFactoryYeonWooPark1.getInstance();
+        IDCardFactoryYeonWooPark1 factory2 = IDCardFactoryYeonWooPark1.getInstance();
 
-        // 신분증을 공장을 통해 생성
-        Factory f = new IDCardFactory();
-        Product id02 = f.create("pyw");
-        id02.use(); 
+        // 두 변수가 동일한 객체를 가리키는지 테스트
+        if (factory1 == factory2) {     
+            System.out.println("factory1과 factory2는 같은 인스턴스입니다.");
+        } else {
+            System.out.println("factory1과 factory2는 다른 인스턴스입니다.");
+        }
 
     }
 }
