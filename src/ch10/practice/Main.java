@@ -11,7 +11,7 @@ public class Main {
         // h1이 h2를 이기는지 확인
         if(h1.isStrongerThan(h1)) {
             System.out.println("h1이 이김");
-        } else if ("h2가 이김")
+        } else if ("h2가 이김");
         
     }
 }
