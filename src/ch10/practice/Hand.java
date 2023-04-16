@@ -10,6 +10,7 @@ public enum Hand {
     private String name; // 가위 바위 보 손의 이름
     private int handvalue; // 가위 바위 보 손의 값 
 
+    // 열거형 클래스 => 타입으로 사용 가능함
     // 손의 값으로 상수를 얻기 위한 배열
     private static Hand[] hands = {
         ROCK, SCISSORS, PAPER

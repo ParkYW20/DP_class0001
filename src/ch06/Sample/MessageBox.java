@@ -27,7 +27,7 @@ public class MessageBox implements Product {
     public Product createCopy() {
         Product p = null;
         try {
-            p = (Product)clone();
+            p = (Product)clone();   // 자기 복제가 일어남
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
