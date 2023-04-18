@@ -7,7 +7,7 @@ public class ProbStrategy implements Strategy {
     private int prevHandValue = 0;
     private int currentHandValue = 0;
     
-    // 2차원 배열 (인덱스([])가 2개씩)
+    // 2차원 배열 ( 인덱스('[]')가 2개씩 )
     private int[][] history = {
         { 1, 1, 1, },
         { 1, 1, 1, },

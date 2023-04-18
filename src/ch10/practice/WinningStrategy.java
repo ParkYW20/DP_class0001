@@ -11,6 +11,7 @@ public class WinningStrategy implements Strategy {
         random = new Random(seed);  // seed가 같으면 동일한 숫자가 생성됨
     }
 
+    // WinningSrategy 핵심
     @Override
     public Hand nextHand() {
         if (!won) {    // 직전에 졌으면
