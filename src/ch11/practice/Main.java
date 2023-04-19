@@ -26,7 +26,7 @@ public class Main {
         System.out.println(root.getSize());
 
         root.printList();
-        root.printList("/");
+        root.printList("");
 
     }
 }

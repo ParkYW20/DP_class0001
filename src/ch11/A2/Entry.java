@@ -1,6 +1,7 @@
 package ch11.A2;
 
 public abstract class Entry {
+    // 자기 부모를 가리킴
     private Entry parent;
 
     // 부모를 설정한다
@@ -32,7 +33,7 @@ public abstract class Entry {
     public String getFullName() {
         StringBuilder fullname = new StringBuilder();   // 문자열 구축을 위한 객체
 
-        Entry entry = this; // 현재 객체를 entry가 가리키게 함
+        Entry entry = this; // entry가 현재 객체를 가리키게 함
 
         do {
             fullname.insert(0, entry.getName());    // 현재 객체의 이름을 맨 앞에 삽입함

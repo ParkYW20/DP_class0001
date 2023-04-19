@@ -1,7 +1,6 @@
 package hw.ch10.lamda;
 
 import java.util.*;
-
 import hw.ch10.Student;
 
 public class Main_2 {
@@ -20,6 +19,7 @@ public class Main_2 {
 		// 메소드
 		System.out.println(" 학번: 20200207, 이름: 박연우 \n");
 		
+		// 이하 람다식: Student 클래스의 compareTo()를 호출 (list 객체에서 정렬하려는 원소들이 Student 인스턴스이므로 가능함)
         list.sort((S1, S2) -> S1.compareTo(S2)); 
 		System.out.println("** (1) 정렬 결과 (오름차순)\n" + list + "\n");
 

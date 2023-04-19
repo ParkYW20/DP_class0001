@@ -5,7 +5,7 @@ package hw.ch10;
 public class Student implements Comparable<Student> {
 
 	// 속성
-	private String name = "";
+	String name = "";
 	String id = "";
 	int height = 0;
 	
@@ -37,11 +37,12 @@ public class Student implements Comparable<Student> {
 	 	Q. 왜 Student 클래스와 Comparator 클래스에서 중복하여
 		 compare(){return o1.compareTo(o2);}와 compareTo() 메소드를 구현해야 하는가?	(compareTo()가 중복됨)
 
-	 * 	=> 2개의 Comparator 클래스가 모두 Comparator<Student>, 즉 정렬 대상인 원소가 특정 객체(Student)임을 가정하고 구현하므로 
-	 * 		객체의 어떤 속성을 기준으로 비교할지를 Student 클래스를 통해 우선하여 정해주어야 함
-	 *  => 또한 Student 클래스에서 compareTo() 메소드를 오버라이딩했고, 그 클래스를 Comparator 클래스가 implements 하여
-	 * 		compareTo()를 호출하기 때문에 Student 클래스에서 compareTo() 메소드를 반드시 구현해야 함(?)
+	 	=> 2개의 Comparator 클래스가 모두 Comparator<Student>, 즉 정렬 대상인 원소가 특정 객체(Student)임을 가정하고 구현하므로 
+	 		객체의 어떤 속성을 기준으로 비교할지를 Student 클래스를 통해 우선하여 정해주어야 함
+	 	=> 또한 Student 클래스에서 compareTo() 메소드를 오버라이딩했고, 그 클래스를 Comparator 클래스가 implements 하여
+	 		compareTo()를 호출하기 때문에 Student 클래스에서 compareTo() 메소드를 반드시 구현해야 함 (+ 인터페이스는 메소드 구현을 '강제'함)
 	 
 	 	Q. return s.height - this.height; 으로 바꿀 경우, Main에서 정렬 시 오름차순과 내림차순 Comparator 결과가 각각 반대로 바뀜. 왜?
+		=> 반환하는 값의 부호가 반대로 바뀜. Student 클래스의 compareTo() 실행 결과가 Main에서 어떻게 적용이 되는가?
 	 */
 }
