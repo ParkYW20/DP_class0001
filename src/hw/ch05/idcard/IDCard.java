@@ -4,7 +4,7 @@ import hw.ch05.framework.Product;
 
 public class IDCard extends Product {
     private String owner;
-    private int serial;
+    // private int serial = 0;
 
     // 패키지 visibility
     IDCard(String owner, int serial) {  

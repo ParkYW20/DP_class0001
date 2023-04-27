@@ -14,7 +14,10 @@ public class Main {
         Directory tmp = new Directory("tmp");
         Directory usr = new Directory("usr");
 
-        // root.add(bin); // Entry 에는 add가 없으므로 실행이 안 됨
+        /*
+         *  Entry root = new Directory("root");
+         *  root.add(bin); // Directory에는 add가 있지만 Entry 에는 add가 없으므로 실행이 안 됨
+         */
         // ((Directory)root).add(bin);
         root.add(bin);
         root.add(tmp);

@@ -3,9 +3,10 @@ package ch11.practice;
 import java.util.ArrayList;
 import java.util.List;
 
-// compsite(그릇)을 나타냄
+// compsite(그릇)을 나타냄 
 public class Directory extends Entry {
     private String name;
+    // size 변수는 없음. 디렉터리의 크기를 동적으로 계산하여 구하기 때문
 
     // 자기 내용물 리스트를 관리하는 변수
     private List<Entry> directory = new ArrayList<>();  // 중요) Entry: 부모 타입 => 자식 객체까지 다 담을 수 있도록 선언한 것임
@@ -27,7 +28,7 @@ public class Directory extends Entry {
         // 확장 for문
         for (Entry entry: directory) {  // directory는 컬렉션 객체(?), 엔트리는 꺼내오는 역할
             size += entry.getSize();    // 재귀적 호출
-        }
+        }                               
         return size;
     }
 

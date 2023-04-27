@@ -2,7 +2,7 @@ package ch12.Sample;
 
 public class FullBorder extends Border {
     public FullBorder(Display display) {
-        super(display);
+        super(display); // 부모 생성자 호출 (생성자 안에서 super() 나오면 부모생성자호출임을 기억)
     }
 
     @Override

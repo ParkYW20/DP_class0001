@@ -1,6 +1,5 @@
 package ch05.A3a;
 
-import javax.sql.rowset.spi.SyncResolver;
 
 public class Singleton {
     private static Singleton singleton = null;

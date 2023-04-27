@@ -8,7 +8,7 @@ import ch04.practice.idcard.IDCardFactory;
 public class Main {
     public static void main(String[] args) {
         // 신분증 직접 생성
-        // Product id01 = new IDCard("pyw");    // 패키지 비저블리티 -> 임시로 클래스에 public 붙여야 실행 가능
+        // Product id01 = new IDCard("pyw");    // 패키지 비저블리티 -> 임시로 클래스에 public 붙여야 실 행 가능
         // id01.use();
 
 

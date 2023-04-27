@@ -8,8 +8,11 @@ public class Main {
     
     public static void main(String[] args) {
         // 책 생성
-        Book b1 = new Book( "book1");
-        Book b2 = new Book( "book2");
+        Book b1 = new Book( "삼국사기");
+        Book b2 = new Book( "훈민정음 해례본");
+        Book b3 = new Book( "삼국유사");
+        Book b4 = new Book( "월인석보");
+
 
         // System.out.println(b1.getName());
         
@@ -24,6 +27,9 @@ public class Main {
         bs1.appendBook(b2);
         // Book result2 = bs1.getBookAt(1);
         // System.out.println(result2.getName());
+        bs1.appendBook(b3);
+        bs1.appendBook(b4);
+
 
         // for 루프를 이용해서 책이름 출력하기
         for(int i = 0; i < bs1.getLength(); i++) {

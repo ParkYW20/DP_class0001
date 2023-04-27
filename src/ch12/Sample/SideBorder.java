@@ -4,7 +4,7 @@ public class SideBorder extends Border {
     private char borderChar;  // 장식 문자
 
     // 내용물이 될 Display와 장식 문자를 지정
-    public SideBorder(Display display, char ch) {
+    public SideBorder(Display display, char ch) {   // 내용물 양쪽에 캐릭터 붙이는 애
         super(display);
         this.borderChar = ch;
     }

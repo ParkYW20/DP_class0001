@@ -13,6 +13,6 @@ public class Banner {
     }
 
     public void showWithAster() {
-        System.out.println("*" + string + "*");     // string 출력력
+        System.out.println("*" + string + "*");     // string 출력
     }
 }

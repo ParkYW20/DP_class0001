@@ -1,8 +1,6 @@
 package ch04.A2.idcard;
 
-
 import java.util.Hashtable;
-
 import ch04.A2.framework.Factory;
 import ch04.A2.framework.Product;
 
@@ -13,7 +11,7 @@ public class IDCardFactory extends Factory {
 
     protected synchronized Product createProduct(String owner) {
         manager.put(serial, owner);
-        owner = manager.get(serial);
+        owner = (String) manager.get(serial);
 
         return new IDCard(owner, serial++);
     }

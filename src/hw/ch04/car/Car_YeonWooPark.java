@@ -13,7 +13,7 @@ public class Car_YeonWooPark extends Product {
         Car_YeonWooPark.modelName = modelName;
         // getModelName()에 static 붙이면서, 속성의 modelName에도 static 붙이고 'this.~' => 'Car_YeonWooPark.~' 로 바꾸었음
     }
-
+ 
     // 메시지 출력
     @Override
     public void use() {
