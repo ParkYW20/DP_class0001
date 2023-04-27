@@ -2,7 +2,7 @@ package ch12.Sample;
 
 public class Main {
     public static void main(String[] args) {
-        // 중심을 생성하는 코드
+        // 중심을 생성
         Display b1 = new StringDisplay("Hello, world.");
 
         // 중심을 장식, 장식한 결과물이 내용물(장식대상)이 될 수 있다

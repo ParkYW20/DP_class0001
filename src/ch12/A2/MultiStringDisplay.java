@@ -21,7 +21,7 @@ public class MultiStringDisplay extends Display {
         body.add(msg);
 
         // 더 긴 문자열을 넣는다면...
-        if (columns < msg.length()) {
+        if (columns < msg.length()) {   // columns는 현재까지의 최대 문자열 길이를 기억하는 변수
             // 최대 문자 수 갱신
             columns = msg.length();
         }

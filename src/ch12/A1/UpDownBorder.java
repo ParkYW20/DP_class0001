@@ -5,7 +5,7 @@ public class UpDownBorder extends Border {
 
     // 내용물이 될 Display와 장식 문자를 지정
     public UpDownBorder(Display display, char ch) {
-        super(display);
+        super(display); // 장식 대상
         this.borderChar = ch;
     }
 

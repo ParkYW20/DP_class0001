@@ -20,7 +20,7 @@ public class FullBorder extends Border {
     @Override
     public String getRowText(int row) {
         if (row == 0) {                                             	// 상단 테두리
-            return "+" + makeLine('-', display.getColumns()) + "+";
+            return "+" + makeLine('-', display.getColumns()) + "+"; // 몇 칸 만들지 내용물의 칸 수
         } else if (row == display.getRows() + 1) {                 	// 하단 테두리
             return "+" + makeLine('-', display.getColumns()) + "+";
         } else {                                                    		// 기타
@@ -29,7 +29,7 @@ public class FullBorder extends Border {
     }
 
     // 문자 ch로 count 수만큼 연속한 문자열을 만든다
-    private String makeLine(char ch, int count) {
+    private String makeLine(char ch, int count) {   // 어떤 캐릭터로 몇 개 만들지
         StringBuilder line = new StringBuilder();
         for (int i = 0; i < count; i++) {
             line.append(ch);

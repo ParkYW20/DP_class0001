@@ -1,10 +1,10 @@
 package ch12.Sample;
 
-public class SideBorder extends Border {
+public class SideBorder extends Border {    // 내용물 양쪽에 캐릭터 붙이는 애
     private char borderChar;  // 장식 문자
 
     // 내용물이 될 Display와 장식 문자를 지정
-    public SideBorder(Display display, char ch) {   // 내용물 양쪽에 캐릭터 붙이는 애
+    public SideBorder(Display display, char ch) {   
         super(display);
         this.borderChar = ch;
     }
@@ -22,7 +22,7 @@ public class SideBorder extends Border {
     }
 
     @Override
-    public String getRowText(int row) {
+    public String getRowText(int row) { // 실제 뭘 출력할지를 return
         // 지정 행의 내용은 내용물의 지정 행 양쪽에 장식 문자를 붙인 것
         return borderChar + display.getRowText(row) + borderChar;
     }

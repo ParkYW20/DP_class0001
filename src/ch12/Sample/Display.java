@@ -6,7 +6,7 @@ public abstract class Display {
     public abstract String getRowText(int row); 	// row행째 문자열을 얻는다
 
     // 모든 행을 표시한다
-    public void show() {
+    public void show() {    // 템플릿 메소드
         for (int i = 0; i < getRows(); i++) {
             System.out.println(getRowText(i));
         }

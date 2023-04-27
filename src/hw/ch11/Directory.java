@@ -43,9 +43,12 @@ public class Directory extends Entry{
 
     @Override
     protected void printList(String prefix) {
-        directory.sort( (a, b) -> a.compareTo(b));
+        // directory.sort( (a, b) -> a.compareTo(b));
 
         System.out.println(prefix + "/" + this + " [" + date + "] " + "[" + getCount() + "개] " + "[" + author + "]");
+        // for (Entry entry: directory) {
+        //     entry.printList(prefix + "/" + name);
+        // }
         for (Entry entry: directory) {
             entry.printList(prefix + "/" + name);
         }
