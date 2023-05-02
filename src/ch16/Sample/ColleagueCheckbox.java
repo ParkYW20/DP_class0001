@@ -29,4 +29,5 @@ public class ColleagueCheckbox extends Checkbox implements ItemListener, Colleag
         // 상태가 변화하면 Mediator에 알린다
         mediator.colleagueChanged();
     }
+    // 콜리그들은 상태가 변화할 때마다(이벤트 발생할 때마다) 중재자에 알림
 }
