@@ -29,7 +29,7 @@ public class FullBorder extends Border {
     }
 
     // 문자 ch로 count 수만큼 연속한 문자열을 만든다
-    private String makeLine(char ch, int count) {
+    private String makeLine(char ch, int count) {   // 왜 private?
         StringBuilder line = new StringBuilder();
         for (int i = 0; i < count; i++) {
             line.append(ch);

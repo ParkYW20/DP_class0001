@@ -5,7 +5,7 @@ import java.util.List;
 
 public class MultiStringDisplay extends Display {
     // 표시 문자열 저장 장소
-    private List<String> body = new ArrayList<>();  // 문자열을 여러 개 가져야 하므로 list 선언
+    private List<String> body = new ArrayList<>();  // 문자열을 여러 개 가져야 하므로 arraylist 선언
     // 표시 문자열 최대 문자 수 
     private int columns = 0;
 
@@ -35,7 +35,7 @@ public class MultiStringDisplay extends Display {
 
     @Override
     public int getRows() {
-        return body.size(); // 문자열의 갯수
+        return body.size(); // 문자열의 갯수 (arraylist의 원소 개수)
     }
 
     @Override
@@ -51,7 +51,7 @@ public class MultiStringDisplay extends Display {
             int padding = columns - line.length();  // 채워야 할 빈 칸 개수
 
             if (padding > 0) {  // 빈 칸을 채워야 하면...
-                body.set(row, line + spaces(padding));
+                body.set(row, line + spaces(padding));  // row는 몇 번 째 행인지
             }
         }
     }

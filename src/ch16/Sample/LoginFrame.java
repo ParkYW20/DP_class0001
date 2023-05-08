@@ -19,7 +19,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
     private ColleagueButton buttonCancel;
 
     // Colleague를 생성하고 배치한 후에 표시한다
-    public LoginFrame(String title) {
+    public LoginFrame(String title) {   // !) 생성자 메소드구나!
         super(title);   // 이게 없으면 부모의 인자 없는 생성자를 호출하게 됨
                         // 이 문장은 반드시 처음에 와야 함. 항상 부모 생성자는 맨 첫 줄에만 와야 함
 
@@ -95,7 +95,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         } else {    // Login 체크박스가 눌러졌으면...
             // 사용자 로그인 
             textUser.setColleagueEnabled(true);
-            userpassChanged();
+            userpassChanged();  // TextField 상태 변화에 따라 활성화/비활성화
         }
     }
 

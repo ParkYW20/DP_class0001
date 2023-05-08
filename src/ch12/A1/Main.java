@@ -17,7 +17,7 @@ public class Main {
                             new SideBorder(
                                 new UpDownBorder(
                                     new SideBorder(
-                                        new StringDisplay("Hello, world."),
+                                        new StringDisplay("Heloo, World!"),
                                         '*'
                                     ),
                                     '='

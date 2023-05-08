@@ -6,7 +6,7 @@ public class IncrementalNumberGenerator extends NumberGenerator {
     private int inc;		// 증갓값 
 
     public IncrementalNumberGenerator(int start, int end, int inc) {
-        this.number = start;
+        this.number = start;    // number부터 시작하니까 초기값으로 start 주는 것임
         this.end = end;
         this.inc = inc;
     }
@@ -21,8 +21,8 @@ public class IncrementalNumberGenerator extends NumberGenerator {
     @Override
     public void execute() {
         while (number < end) {
-            notifyObservers();
-            number += inc;
+            notifyObservers();  // 관찰자들에게 통지
+            number += inc;  // 반복할 때마다 증가된 숫자가 통지될 것임
         }
     }
 }

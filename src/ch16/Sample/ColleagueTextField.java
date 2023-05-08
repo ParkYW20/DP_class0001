@@ -6,7 +6,7 @@ import java.awt.event.TextEvent;
 import java.awt.event.TextListener;
 
 public class ColleagueTextField extends TextField implements TextListener, Colleague {
-    private Mediator mediator;  // 자기 중재자를 가지고 있음음
+    private Mediator mediator;  // 자기 중재자를 가지고 있음
 
     public ColleagueTextField(String text, int columns) {
         super(text, columns);
@@ -26,8 +26,11 @@ public class ColleagueTextField extends TextField implements TextListener, Colle
         setBackground(enabled ? Color.white : Color.lightGray); // 1st인자 참이면 2nd인자 실행, 거짓이면 3rd인자 실행
     }
 
+    // Event Listener
+    /* 사용자가 문자 입력할 때마다 TextEvent 가 발생함
+        -> 등록되어 있던 TextListener의 textValueChanged(TextEvent e) 메소드가 실행됨 */
     @Override
-    public void textValueChanged(TextEvent e) {
+    public void textValueChanged(TextEvent e) {  // TextListener 인터페이스를 구현한다
         // 문자열이 변화했으면 Mediator에 알린다
         mediator.colleagueChanged();    // 중재자한테 통지가 가는 것을 알 수 있음
     }

@@ -1,3 +1,5 @@
+package ch17.Sample;
+
 public class Main {
     public static void main(String[] args) {
         NumberGenerator generator = new RandomNumberGenerator();
@@ -7,4 +9,6 @@ public class Main {
         generator.addObserver(observer2);
         generator.execute();
     }
+    // 관찰 대상이 숫자를 생성하면 관찰자가 관찰해서 출력
+    // update() 사용
 }
