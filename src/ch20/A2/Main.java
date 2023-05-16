@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("공유한 경우:");
         testAllocation(true);
+        
         System.out.println("공유하지 않는 경우:");
         testAllocation(false);
     }

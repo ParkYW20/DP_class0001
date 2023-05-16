@@ -8,6 +8,8 @@ import java.awt.Label;
 import java.awt.Panel;
 import java.awt.TextArea;
 import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class SafeFrame extends Frame implements ActionListener, Context {
     private TextField textClock = new TextField(60);		// 현재 시간 표시
@@ -49,6 +51,12 @@ public class SafeFrame extends Frame implements ActionListener, Context {
         // 표시 
         pack();
         setVisible(true);
+    }
+
+    // 버튼이 눌리면 여기로 온다
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
     }
 
     // 시간 설정 

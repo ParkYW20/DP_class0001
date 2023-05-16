@@ -1,5 +1,6 @@
 package ch19.A4;
 
+// '비상시' 상태
 public class UrgentState implements State {
     private static UrgentState singleton = new UrgentState();
 

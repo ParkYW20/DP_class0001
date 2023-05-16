@@ -10,7 +10,8 @@ import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SafeFrame extends Frame implements ActionListener, Context {
+// public class SafeFrame extends Frame implements ActionListener, Context {
+public class SafeFrame extends Frame implements Context {
     private TextField textClock = new TextField(60);		// 현재 시간 표시
     private TextArea textScreen = new TextArea(10, 60);	// 경비 센터 출력
     private Button buttonUse = new Button("금고 사용");	// 금고 사용 버튼
@@ -43,28 +44,37 @@ public class SafeFrame extends Frame implements ActionListener, Context {
         pack();
         setVisible(true);
         // 리스너 설정 
-        buttonUse.addActionListener(this);
-        buttonAlarm.addActionListener(this);
-        buttonPhone.addActionListener(this);
-        buttonExit.addActionListener(this);
+        // 중요) functional interface : 메소드가 딱 하나만 선언되어 있는 인터페이스
+        // functional interface 객체가 들어갈 자리에는 람다식을 넣을 수 있다.
+        // buttonUse.addActionListener(this);  // ActionListener 객체의 actionPerformed()가 호출됨 
+        buttonUse.addActionListener( (e) -> {state.doUse(this);} );    // ActionEvent 객체를 인자로 받음
+
+        // buttonAlarm.addActionListener(this);
+        buttonAlarm.addActionListener( (e) -> {state.doAlarm(this);} );
+
+        // buttonPhone.addActionListener(this);
+        buttonPhone.addActionListener( (e) -> {state.doPhone(this);});
+
+        // buttonExit.addActionListener(this);
+        buttonExit.addActionListener( (e) -> {System.exit(0)});
     }
 
     // 버튼이 눌리면 여기로 온다
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        System.out.println(e.toString());
-        if (e.getSource() == buttonUse) {		// 금고 사용 버튼
-            state.doUse(this);
-        } else if (e.getSource() == buttonAlarm) {	// 비상벨 버튼 
-            state.doAlarm(this);
-        } else if (e.getSource() == buttonPhone) {	// 일반 통화 버튼  
-            state.doPhone(this);
-        } else if (e.getSource() == buttonExit) {	// 종료 버튼 
-            System.exit(0);
-        } else {
-            System.out.println("?");
-        }
-    }
+    // @Override
+    // public void actionPerformed(ActionEvent e) {
+    //     System.out.println(e.toString());
+    //     if (e.getSource() == buttonUse) {		// 금고 사용 버튼
+    //         state.doUse(this);
+    //     } else if (e.getSource() == buttonAlarm) {	// 비상벨 버튼 
+    //         state.doAlarm(this);
+    //     } else if (e.getSource() == buttonPhone) {	// 일반 통화 버튼  
+    //         state.doPhone(this);
+    //     } else if (e.getSource() == buttonExit) {	// 종료 버튼 
+    //         System.exit(0);
+    //     } else {
+    //         System.out.println("?");
+    //     }
+    // }
 
     // 시간 설정 
     @Override

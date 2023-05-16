@@ -12,8 +12,8 @@ public class DayState implements State {
 
     @Override
     public void doClock(Context context, int hour) {
-        if (hour < 9 || 17 <= hour) {
-            context.changeState(NightState.getInstance());
+        if (hour < 9 || 17 <= hour) {   // 야간에 해당하면...
+            context.changeState(NightState.getInstance());  // 
         }
     }
 
