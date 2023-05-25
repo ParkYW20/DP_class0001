@@ -11,7 +11,7 @@ public class DrawCommand implements Command {
     private Point position;
 
     // 생성자 
-    public DrawCommand(Drawable drawable, Point position) {
+    public DrawCommand(Drawable drawable, Point position) { // 도화지, 좌표
         this.drawable = drawable;
         this.position = position;
     }

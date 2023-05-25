@@ -18,6 +18,6 @@ public class ColorCommand implements Command {
     // 실행 
     @Override
     public void execute() { // command 객체가 하는 일
-        drawable.setColor(color);
+        drawable.setColor(color);   // 캔버스에 setColor를 호출
     }
 }

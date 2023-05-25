@@ -31,7 +31,7 @@ public class DrawCanvas extends Canvas implements Drawable {
     // 초기화 
     @Override
     public void init() {
-        color = Color.red;
+        color = Color.red;  // 시작 색깔 설정 (초기화)
         radius = 6;
         history.append(new ColorCommand(this, color));
     }
