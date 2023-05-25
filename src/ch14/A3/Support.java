@@ -17,8 +17,10 @@ public abstract class Support {
 
     // 트러블 해결 절차를 결정한다 
     public void support(Trouble trouble) {
+        // obj: 현재 해결자를 가리키는 변수
         for (Support obj = this; true; obj = obj.next) {
-            if (obj.resolve(trouble)) {
+            // if (this.resolve(trouble)) {  // 원래 코드(sample): this.resolve()
+            if (obj.resolve(trouble)) {     // obj.resolve()
                 obj.done(trouble);
                 break;
             } else if (obj.next == null) {

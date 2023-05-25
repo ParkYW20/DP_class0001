@@ -1,5 +1,6 @@
 package ch14.Sample;
 
+// 홀수이면 해결
 public class OddSupport extends Support {
     public OddSupport(String name) {
         super(name);

@@ -17,7 +17,7 @@ public class ColorCommand implements Command {
 
     // 실행 
     @Override
-    public void execute() {
+    public void execute() { // command 객체가 하는 일
         drawable.setColor(color);
     }
 }

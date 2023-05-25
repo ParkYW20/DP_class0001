@@ -1,4 +1,4 @@
-package ch19.A3;
+package hw.ch19;
 
 import java.awt.BorderLayout;
 import java.awt.Button;
@@ -11,12 +11,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class SafeFrame extends Frame implements ActionListener, Context {
-    private TextField textClock = new TextField(60);		// 현재 시간 표시
-    private TextArea textScreen = new TextArea(10, 60);	// 경비 센터 출력
-    private Button buttonUse = new Button("Use Safe");	// 금고 사용 버튼
-    private Button buttonAlarm = new Button("Emergency Bell");	// 비상벨 버튼
-    private Button buttonPhone = new Button("General Call");	// 일반 통화 버튼
-    private Button buttonExit = new Button("Exit");		// 종료 버튼
+    private TextField textClock = new TextField(60);		  // 현재 시간 표시
+    private TextArea textScreen = new TextArea(10, 60);  // 경비 센터 출력
+    private Button buttonUse = new Button("Use Safe");	      // 금고 사용 버튼
+    private Button buttonAlarm = new Button("Emergency Bell");  // 비상벨 버튼
+    private Button buttonPhone = new Button("General Call");	  // 일반 통화 버튼
+    private Button buttonCCTV = new Button("CCTV");             // 추가: CCTV 버튼
+    private Button buttonExit = new Button("Exit");		      // 종료 버튼
 
     private State state = DayState.getInstance();		// 현재 상태 
 
@@ -36,6 +37,7 @@ public class SafeFrame extends Frame implements ActionListener, Context {
         panel.add(buttonUse);
         panel.add(buttonAlarm);
         panel.add(buttonPhone);
+        panel.add(buttonCCTV);  // 추가: CCTV 버튼
         panel.add(buttonExit);
         // 그 패널을 배치 
         add(panel, BorderLayout.SOUTH);
@@ -46,6 +48,7 @@ public class SafeFrame extends Frame implements ActionListener, Context {
         buttonUse.addActionListener(this);
         buttonAlarm.addActionListener(this);
         buttonPhone.addActionListener(this);
+        buttonCCTV.addActionListener(this);  // CCTV 리스너 연결
         buttonExit.addActionListener(this);
     }
 
@@ -53,12 +56,14 @@ public class SafeFrame extends Frame implements ActionListener, Context {
     @Override
     public void actionPerformed(ActionEvent e) {
         System.out.println(e.toString());
-        if (e.getSource() == buttonUse) {		// 금고 사용 버튼
+        if (e.getSource() == buttonUse) {		    // 금고 사용 버튼
             state.doUse(this);
         } else if (e.getSource() == buttonAlarm) {	// 비상벨 버튼 
             state.doAlarm(this);
         } else if (e.getSource() == buttonPhone) {	// 일반 통화 버튼  
             state.doPhone(this);
+        } else if (e.getSource() == buttonCCTV) {   // 추가: CCTV 버튼
+            state.doCCTV(this);
         } else if (e.getSource() == buttonExit) {	// 종료 버튼 
             System.exit(0);
         } else {

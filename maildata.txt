@@ -1,0 +1,6 @@
+// property 파일 이라고 부름
+hyuki@example.com=Hiroshi Yuki
+youngjin@example.com=Kim Youngjin
+dojun@example.com=dojun
+gildong@example.com=Hong Gildong
+motheryourstar@duksung.ac.kr Park Yeon Woo

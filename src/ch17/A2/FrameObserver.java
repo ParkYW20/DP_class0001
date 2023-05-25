@@ -22,10 +22,12 @@ public class FrameObserver extends Frame implements Observer, ActionListener {
         @Override
         public void update(NumberGenerator generator) {
             int number = generator.getNumber();
+            
             String text = number + ":";
             for (int i = 0; i < number; i++) {
                 text += '*';
             }
+            
             setText(text);
         }
     }
@@ -37,14 +39,18 @@ public class FrameObserver extends Frame implements Observer, ActionListener {
         @Override
         public void update(NumberGenerator generator) {
             number = generator.getNumber();
-            repaint();
+            repaint();  //도화지를 clear한 후 paint()를 호출함
         }
 
-        public void paint(Graphics g) {
+        public void paint(Graphics g) { // Graphics 객체: fillArc() 제공
             int width = getWidth();
             int height = getHeight();
+
+            // 원 전체를 그림
             g.setColor(Color.white);
             g.fillArc(0, 0, width, height, 0, 360);
+            
+            // 원호를 그림
             g.setColor(Color.red);
             g.fillArc(0, 0, width, height, 90, - number * 360 / 50);
         }

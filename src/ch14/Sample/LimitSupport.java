@@ -11,7 +11,7 @@ public class LimitSupport extends Support {
     @Override
     protected boolean resolve(Trouble trouble) {
         if (trouble.getNumber() < limit) {
-            return true;
+            return true;    // 해결한다는 의미
         } else {
             return false;
         }

@@ -11,6 +11,7 @@ public class Main {
 
         // 사슬 형성 
         alice.setNext(bob).setNext(charlie).setNext(diana).setNext(elmo).setNext(fred);
+        // alice.setNext(fred).setNext(bob).setNext(charlie).setNext(elmo).setNext(diana);  // 사슬 형태는 언제든지 바꿀 수 있다
 
         // 다양한 트러블 발생
         for (int i = 0; i < 500; i += 33) {

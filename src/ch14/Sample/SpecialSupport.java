@@ -1,5 +1,6 @@
 package ch14.Sample;
 
+// 지정한 번호만 해결
 public class SpecialSupport extends Support {
     private int number; // 이 번호만 해결할 수 있다
 
