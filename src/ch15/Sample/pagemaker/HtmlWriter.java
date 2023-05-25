@@ -3,14 +3,17 @@ package ch15.Sample.pagemaker;
 import java.io.Writer;
 import java.io.IOException;
 
+// 웹페이지를 만들어주는 (작성하는) 클래스
 public class HtmlWriter {
-    private Writer writer;
+    // 속성
+    private Writer writer;  // Writer 변수 만들어줘야 한다
 
+    // 생성자
     public HtmlWriter(Writer writer) {
-        this.writer = writer;
+        this.writer = writer; 
     }
 
-    // 타이틀 출력 
+    // 타이틀 출력 (html 앞부분 생성)
     public void title(String title) throws IOException {
         writer.write("<!DOCTYPE html>");
         writer.write("<html>");
@@ -19,7 +22,7 @@ public class HtmlWriter {
         writer.write("</head>");
         writer.write("<body>");
         writer.write("\n");
-        writer.write("<h1>" + title + "</h1>");
+        writer.write("<h1>" + title + "</h1>");   // (화면에 굵은 글씨로 출력됨)
         writer.write("\n");
     }
 
@@ -29,9 +32,11 @@ public class HtmlWriter {
         writer.write("\n");
     }
 
-    // 링크 출력
+    // 링크 출력 (hyper link 생성)
     public void link(String href, String caption) throws IOException {
-        paragraph("<a href=\"" + href + "\">" + caption + "</a>");
+        paragraph("<a href=\"" + href + "\">" + caption + "</a>");  // \" : \를 사용하기 위함
+
+        // paragraph("<a>" + caption + "</a"); // href 가 없으면 이렇게 만들면 됨
     }
 
     // 이메일 주소 출력 
@@ -44,6 +49,7 @@ public class HtmlWriter {
         writer.write("</body>");
         writer.write("</html>");
         writer.write("\n");
+
         writer.close();
     }
 }
