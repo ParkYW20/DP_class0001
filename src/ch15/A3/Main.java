@@ -4,7 +4,9 @@ public class Main {
     public static void main(String[] args) {
         String title = "Welcome!";
         String message = "Hello, world!";
-        String html = """
+        
+        // 텍스트 블럭이 시작된다
+        String html = """  
         <!DOCTYPE html>
         <html>
             <head>
@@ -14,7 +16,7 @@ public class Main {
                 <h1 style="text-align: center">%s</h1>
             </body>
         </html>
-        """.formatted(title, message);
+            """.formatted(title, message);
         System.out.print(html);
     }
 }

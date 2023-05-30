@@ -4,7 +4,7 @@ import java.io.*;
 
 public class HTMLBuilder extends Builder {
     private String filename = "untitled.html";
-    private StringBuilder sb = new StringBuilder();
+    private StringBuilder sb = new StringBuilder();  // 여기에 내용 쌓는다
 
     @Override
     public void makeTitle(String title) {
@@ -30,11 +30,13 @@ public class HTMLBuilder extends Builder {
     @Override
     public void makeItems(String[] items) {
         sb.append("<ul>\n");
+
         for (String s: items) {
             sb.append("<li>");
             sb.append(s);
             sb.append("</li>\n");
         }
+
         sb.append("</ul>\n\n");
     }
 
@@ -42,8 +44,9 @@ public class HTMLBuilder extends Builder {
     public void close() {
         sb.append("</body>");
         sb.append("</html>\n");
+
         try {
-            Writer writer = new FileWriter(filename);
+            Writer writer = new FileWriter(filename);   // 만들어진 문서를 저장
             writer.write(sb.toString());
             writer.close();
         } catch (IOException e) {

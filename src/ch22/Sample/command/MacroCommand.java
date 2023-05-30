@@ -12,7 +12,7 @@ public class MacroCommand implements Command {
     // 실행 
     @Override
     public void execute() {
-        for (Command cmd: commands) {
+        for (Command cmd: commands) {   // 내부적으로 iterator() 메소드를 호출해서 작동함
             cmd.execute();  // 자기가 포함하고 있는 command의 excute()을 실행 시킴
         }
     }

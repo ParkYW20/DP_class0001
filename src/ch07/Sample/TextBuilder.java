@@ -1,7 +1,7 @@
 package ch07.Sample;
 
 public class TextBuilder extends Builder {
-    private StringBuilder sb = new StringBuilder();
+    private StringBuilder sb = new StringBuilder();  // vs. StringBuffer() 와 하는 일 같음
 
     @Override
     public void makeTitle(String title) {

@@ -8,6 +8,6 @@ public class Main {
         Director director = new Director(framebuilder);
         director.construct();
         JFrame frame = framebuilder.getFrameResult();
-        frame.setVisible(true);
+        frame.setVisible(true);  // be printed in window
     }
 }
