@@ -6,16 +6,18 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Canvas;
 
+// Receiver(수신자) 역할: Command 명령을 실행할 대상 & Invoker(기동자) 역할
 public class DrawCanvas extends Canvas implements Drawable {
     // 그리기 색 
     private Color color;
     // 그리기 점의 반경
     private int radius;
-    // 이력 
+    // 이력 (지금까지 실행한 명령어들의 집합)
     private MacroCommand history;
 
     // 생성자 
     public DrawCanvas(int width, int height, MacroCommand history) {
+        // DrawCanvas 인스턴스를 초기화함
         setSize(width, height);
         setBackground(Color.white);
         this.history = history;
@@ -23,9 +25,11 @@ public class DrawCanvas extends Canvas implements Drawable {
     }
 
     // 이력 전체 다시 그리기
+    // DrawCanvas를 다시 그려야 할 때 java.awt 프레임워크에서 자동으로 호출됨
+    // repaint() 호출 시 자동으로 paint() 실행
     @Override
     public void paint(Graphics g) {
-        history.execute();
+        history.execute();  // 보관되어 있는 모든 그리기 이력들을 실행함
     }
 
     // 초기화 
@@ -38,7 +42,7 @@ public class DrawCanvas extends Canvas implements Drawable {
 
     // 그리기 
     @Override
-    public void draw(int x, int y) {
+    public void draw(int x, int y) {    // 마우스 이벤트가 발생한 곳의 좌표값
         Graphics g = getGraphics();
         g.setColor(color);
         g.fillOval(x - radius, y - radius, radius * 2, radius * 2);

@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Memento {
-    private int money;             // 소지금 
+    private int money;            // 소지금 
     private List<String> fruits;  // 과일
 
     // 소지금을 얻는다(narrow interface)
     public int getMoney() {
+    // int getMoney() {
         return money;
     }
 
@@ -25,6 +26,6 @@ public class Memento {
 
     // 과일을 얻는다(wide interface)
     List<String> getFruits() {
-         return new ArrayList<>(fruits);
+        return new ArrayList<>(fruits);
     }
 }

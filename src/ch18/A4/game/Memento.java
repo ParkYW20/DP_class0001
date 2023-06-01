@@ -27,7 +27,7 @@ public class Memento {
 
     // 과일을 얻는다(wide interface)
     List<String> getFruits() {
-         return new ArrayList<>(fruits);
+        return new ArrayList<>(fruits);
     }
 
     // 파일에 저장
@@ -46,7 +46,7 @@ public class Memento {
 
         // 쓰기
         try {
-            Files.writeString(Path.of(filename), sb,
+            Files.writeString(Path.of(filename), sb,    // Path.of() :경로객체
                     StandardOpenOption.CREATE,
                     StandardOpenOption.TRUNCATE_EXISTING,
                     StandardOpenOption.WRITE);
@@ -61,7 +61,7 @@ public class Memento {
     public static Memento loadFromFile(String filename) {
         try {
             // 읽기
-            List<String> lines = Files.readAllLines(Path.of(filename));
+            List<String> lines = Files.readAllLines(Path.of(filename)); // 1줄씩 string으로 읽어들여서 list로 만듦
             if (lines.size() == 0) {
                 System.out.println("Empty file");
                 return null;
@@ -70,9 +70,9 @@ public class Memento {
             // 소지금
             int money = 0;
             try {
-                money = Integer.parseInt(lines.get(0));
+                money = Integer.parseInt(lines.get(0));  // 돈의 액수 string을 정수로 변환
             } catch (NumberFormatException e) {
-                System.out.println("Format error: " + e);
+                System.out.println("Format error: " + e);      // 실패하면 포맷 에러 발생시킴
                 return null;
             }
 
@@ -80,13 +80,13 @@ public class Memento {
             Memento memento = new Memento(money);
 
             // 과일
-            for (int i = 1; i < lines.size(); i++) {
+            for (int i = 1; i < lines.size(); i++) {    // index 1부터 과일 저장
                 memento.addFruit(lines.get(i));
             }
             return memento;
         } catch (IOException e) {
             System.out.println(e.toString());
-            return null;
+            return null;    // null이 return되면 제대로 객체 생성이 안 되었다는 의미
         }
     }
 }

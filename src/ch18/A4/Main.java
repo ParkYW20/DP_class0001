@@ -6,7 +6,7 @@ import ch18.A4.game.Gamer;
 import java.io.*;
 
 public class Main {
-    public static final String SAVEFILENAME = "game.dat";
+    public static final String SAVEFILENAME = "game.dat";   // final: 상수
 
     public static void main(String[] args) {
         Gamer gamer = new Gamer(100);         // 최초 소지금은 100

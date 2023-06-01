@@ -3,6 +3,7 @@ package ch18.Sample;
 import ch18.Sample.game.Memento;
 import ch18.Sample.game.Gamer;
 
+// Caretaker 역할
 public class Main {
     public static void main(String[] args) {
         Gamer gamer = new Gamer(100);		// 최초 소지금은 100
@@ -21,10 +22,10 @@ public class Main {
             // Memento 취급 방법 결정 
             if (gamer.getMoney() > memento.getMoney()) {
                 System.out.println("※많이 늘었으니 현재 상태를 저장하자!");
-                memento = gamer.createMemento();
+                memento = gamer.createMemento();    // 돈이 늘어난 상태로 memento가 바뀜, 상태가 보관됨
             } else if (gamer.getMoney() < memento.getMoney() / 2) {
                 System.out.println("※많이 줄었으니 이전 상태를 복원하자！");
-                gamer.restoreMemento(memento);
+                gamer.restoreMemento(memento);      // 돈을 원래 상태로 복구함
             }
 
             // 잠시 대기 
