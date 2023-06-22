@@ -1,20 +1,17 @@
-package ch15.Sample.pagemaker;
+package hw.ch15.pagemaker;
 
 import java.io.Writer;
 import java.io.IOException;
 
-// 웹페이지를 만들어주는 (작성하는) 클래스
 public class HtmlWriter {
-    // 속성
-    private Writer writer;  // Writer 변수 만들어줘야 한다
+    private Writer writer;
 
-    // 생성자
     public HtmlWriter(Writer writer) {
-        this.writer = writer; 
+        this.writer = writer;
     }
 
-    // 타이틀 출력 (html 앞부분 생성)
-    public void title(String title) throws IOException {    // throws : 해당 메소드를 호출한 곳으로 예외처리를 떠넘김 (PageMaker 클래스의 try-catch문으로 떠넘김)
+    // 타이틀 출력 
+    public void title(String title) throws IOException {
         writer.write("<!DOCTYPE html>");
         writer.write("<html>");
         writer.write("<head>");
@@ -22,21 +19,20 @@ public class HtmlWriter {
         writer.write("</head>");
         writer.write("<body>");
         writer.write("\n");
-        writer.write("<h1>" + title + "</h1>");   // (화면에 굵은 글씨로 출력됨)
+        // writer.write("<h1>" + title + "</h1>");  // 아래와 같이 수정함
+        writer.write("<h1>" + "박연우의 URL Page" + "</h1>");
         writer.write("\n");
     }
 
-    // 단락 출력
+    // 단락 출력 
     public void paragraph(String msg) throws IOException {
         writer.write("<p>" + msg + "</p>");
         writer.write("\n");
     }
 
-    // 링크 출력 (hyper link 생성)
+    // 링크 출력 
     public void link(String href, String caption) throws IOException {
-        paragraph("<a href=\"" + href + "\">" + caption + "</a>");  // \" : \를 사용하기 위함
-
-        // paragraph("<a>" + caption + "</a"); // href 가 없으면 이렇게 만들면 됨
+        paragraph("<a href=\"" + href + "\">" + caption + "</a>");
     }
 
     // 이메일 주소 출력 
@@ -49,7 +45,6 @@ public class HtmlWriter {
         writer.write("</body>");
         writer.write("</html>");
         writer.write("\n");
-
         writer.close();
     }
 }

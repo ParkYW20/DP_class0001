@@ -21,6 +21,9 @@ public abstract class NumberGenerator {
     public void notifyObservers() {
         for (Observer o: observers) {
             o.update(this);
+            // o.update(this.getNumber());
+            // o.update(this, this.getNumber());
+
         }
     }
 

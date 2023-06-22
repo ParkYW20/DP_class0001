@@ -84,7 +84,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         buttonCancel.addActionListener(this);
     }
 
-    // Colleage의 상태가 바뀌면 호출된다
+    // Colleague의 상태가 바뀌면 호출된다
     @Override
     public void colleagueChanged() {
         if (checkGuest.getState()) {    // Guest 체크박스가 눌러졌으면...

@@ -3,8 +3,14 @@ package ch17.Sample;
 public class GraphObserver implements Observer {
     @Override
     public void update(NumberGenerator generator) {
+    // public void update(int number) {
+    // public void update(NumberGenerator generator, int number) {
+
         System.out.print("GraphObserver:");
+
         int count = generator.getNumber();
+        // int count = number;
+
         for (int i = 0; i < count; i++) {
             System.out.print("*");
         }

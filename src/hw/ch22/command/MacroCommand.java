@@ -2,6 +2,7 @@ package hw.ch22.command;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.Iterator;
 
 public class MacroCommand implements Command {
     // 명령의 배열 
@@ -11,8 +12,14 @@ public class MacroCommand implements Command {
     // 실행 
     @Override
     public void execute() {
-        for (Command cmd: commands) {   // 자신이 가지고 있는 모든 명령의 excute()를 호출하는 메소드
-            cmd.execute();  // MacroCommand 인스턴스(명령)가 있으면 그 인스턴스가 가진 명령들의 excute() 실행시킴
+        // for (Command cmd: commands) {   // 자신이 가지고 있는 모든 명령의 excute()를 호출하는 메소드
+        //     cmd.execute();  // MacroCommand 인스턴스(명령)가 있으면 그 인스턴스가 가진 명령들의 excute() 실행시킴
+        // }
+        Command cmd;
+        Iterator<Command> i = commands.descendingIterator();
+        while (i.hasNext()) {
+            cmd = i.next();
+            cmd.execute();
         }
     }
 

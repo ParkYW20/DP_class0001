@@ -1,10 +1,12 @@
 package ch21.Sample;
+
+// 본인: 생성될 때 시간이 오래 걸림
 public class Printer implements Printable {
     private String name; // 이름 
 
     // 생성자 
     public Printer() {
-        heavyJob("Printer 인스턴스 생성 중");
+        heavyJob("Printer 인스턴스 생성 중");   // 시간이 오래 걸리는 일
     }
 
     // 생성자(이름 지정)
@@ -37,7 +39,7 @@ public class Printer implements Printable {
         System.out.print(msg);
         for (int i = 0; i < 5; i++) {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(1000); // 1초 간 CPU 내놓고 쉼
             } catch (InterruptedException e) {
             }
             System.out.print(".");
